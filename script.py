@@ -1,3 +1,21 @@
+import requests   # husk 'pip install requests'
+
+
+res = requests.get('https://www.ek.dk')
+print( res.status_code )
+
+f = open('index.html', 'w')
+f.write(res.text)
+
+
+css = requests.get('https://www.ek.dk/dist/css/fontawesome.CHUeQN7T.css')
+
+f = open('stylesheet.css', 'w')
+f.write(css.text)
+
+
+
+
 
 
 
